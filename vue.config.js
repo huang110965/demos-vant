@@ -1,0 +1,15 @@
+module.exports={
+  devServer:{
+    port:'8080',
+    proxy:{
+      '/api':{
+        target:'http://www.apiopen.top',
+        pathRewrite:{'^/api':''},
+      },
+      '/query':{
+        target:'http://www.kuaidi100.com/query',
+        pathRewrite:{'^/query':''},
+      }
+    }
+  }
+}
